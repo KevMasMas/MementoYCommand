@@ -36,11 +36,11 @@ public class Calculadora {
     public double getResultadoActual() {
         return resultadoActual;
     }
-
-    private void guardarEstado() {
-        Memento memento = new Memento(resultadoActual, "Estado guardado");
-        caretaker.guardarEstado(memento);
+    
+    public Memento guardarEstado() {
+        return new Memento(resultadoActual, "Estado guardado");
     }
+
 
     public void deshacer() {
         Memento memento = caretaker.deshacer();
@@ -62,5 +62,13 @@ public class Calculadora {
 
     public boolean puedeRehacer() {
         return caretaker.puedeRehacer();
+    }
+
+    public double getEstado() {
+        return resultadoActual;
+    }
+
+    public void restaurarEstado(Memento memento) {
+        this.resultadoActual = memento.getEstado();
     }
 }

@@ -16,15 +16,15 @@ public class Memento {
     public String getDescripcionOperacion() {
         return descripcionOperacion;
     }
-
-    //public Memento guardarEstado() {
-    //return new Memento(resultadoActual, "Descripción o tipo de operación");
-    // }
-
-    //public void restaurarEstado(Memento memento) {
-    //this.resultadoActual = memento.getEstado();
+    /*
+    public Memento guardarEstado() {
+    return new Memento(resultadoActual, "Descripción o tipo de operación");
+     }*/
+    /*
+    public void restaurarEstado(Memento memento) {
+    this.resultadoActual = memento.getEstado();
 
     //La clase calculadora debe tener estos metodos, si es necesario cambiarlos quien soy yo?
-    //}
+    }*/
     
 }
