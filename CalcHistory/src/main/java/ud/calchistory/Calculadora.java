@@ -9,25 +9,25 @@ public class Calculadora {
         this.resultadoActual = 0;
     }
 
-    public void sumar(double valor) {
+    public void sumar(double valor1, double valor2) {
         guardarEstado();
-        resultadoActual += valor;
+        resultadoActual = valor1 + valor2;  
     }
 
-    public void restar(double valor) {
+    public void restar(double valor1, double valor2) {
         guardarEstado();
-        resultadoActual -= valor;
+        resultadoActual = valor1 - valor2;
     }
 
-    public void multiplicar(double valor) {
+    public void multiplicar(double valor1, double valor2) {
         guardarEstado();
-        resultadoActual *= valor;
+        resultadoActual = valor1 * valor2;
     }
 
-    public void dividir(double valor) {
-        if (valor != 0) {
+    public void dividir(double valor1, double valor2) {
+        if (valor2 != 0) {
             guardarEstado();
-            resultadoActual /= valor;
+            resultadoActual = valor1 / valor2;
         } else {
             throw new ArithmeticException("No se puede dividir por cero.");
         }

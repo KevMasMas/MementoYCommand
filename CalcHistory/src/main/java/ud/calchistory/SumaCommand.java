@@ -11,16 +11,19 @@ package ud.calchistory;
 public class SumaCommand implements Command {
     
     private Calculadora calculadora;
-    private double valor;
+    private double valor1;
+    private double valor2;
 
-    public SumaCommand(Calculadora calculadora, double valor) {
+
+    public SumaCommand(Calculadora calculadora, double valor1, double valor2) {
         this.calculadora = calculadora;
-        this.valor = valor;
+        this.valor1 = valor1;
+        this.valor2 = valor2;
     }
 
     @Override
     public void execute() {
-        calculadora.sumar(valor);
+        calculadora.sumar(valor1,valor2);
     }
     
 }

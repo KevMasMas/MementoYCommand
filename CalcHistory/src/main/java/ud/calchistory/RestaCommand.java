@@ -10,15 +10,17 @@ package ud.calchistory;
  */
 public class RestaCommand implements Command{
     private Calculadora calculadora;
-    private double valor;
+    private double valor1;
+    private double valor2;
 
-    public RestaCommand(Calculadora calculadora, double valor) {
+    public RestaCommand(Calculadora calculadora, double valor1, double valor2) {
         this.calculadora = calculadora;
-        this.valor = valor;
+        this.valor1 = valor1;
+        this.valor2 = valor2;
     }
 
     @Override
     public void execute() {
-        calculadora.restar(valor);
+        calculadora.restar(valor1, valor2);
     }
 }

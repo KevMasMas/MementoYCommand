@@ -32,23 +32,26 @@ public class Main {
                     System.out.println("No se puede rehacer.");
                 }
             } else {
-                System.out.println("Ingrese el valor:");
-                double valor = scanner.nextDouble();
-                scanner.nextLine(); // Consume newline
+                System.out.println("Ingrese el primer valor:");
+                double valor1 = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.println("Ingrese el segundo valor:");
+                double valor2 = scanner.nextDouble();
+                scanner.nextLine();
 
                 Command operationCommand = null;
                 switch (command.toLowerCase()) {
                     case "suma":
-                        operationCommand = new SumaCommand(calculadora, valor);
+                        operationCommand = new SumaCommand(calculadora, valor1, valor2);
                         break;
                     case "resta":
-                        operationCommand = new RestaCommand(calculadora, valor);
+                        operationCommand = new RestaCommand(calculadora, valor1, valor2);
                         break;
                     case "multiplicacion":
-                        operationCommand = new MultiplicacionCommand(calculadora, valor);
+                        operationCommand = new MultiplicacionCommand(calculadora, valor1, valor2);
                         break;
                     case "division":
-                        operationCommand = new DivisionCommand(calculadora, valor);
+                        operationCommand = new DivisionCommand(calculadora, valor1, valor2);
                         break;
                     default:
                         System.out.println("Operación no válida.");

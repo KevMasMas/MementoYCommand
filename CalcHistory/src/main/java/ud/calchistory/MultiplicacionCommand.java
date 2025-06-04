@@ -10,15 +10,17 @@ package ud.calchistory;
  */
 public class MultiplicacionCommand implements Command{
     private Calculadora calculadora;
-    private double valor;
+    private double valor1;
+    private double valor2;
 
-    public MultiplicacionCommand(Calculadora calculadora, double valor) {
+    public MultiplicacionCommand(Calculadora calculadora, double valor1, double valor2) {
         this.calculadora = calculadora;
-        this.valor = valor;
+        this.valor1 = valor1;
+        this.valor2 = valor2;
     }
 
     @Override
     public void execute() {
-        calculadora.multiplicar(valor);
+        calculadora.multiplicar(valor1, valor2);
     }
 }
